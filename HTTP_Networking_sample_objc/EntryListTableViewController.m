@@ -8,6 +8,7 @@
 
 #import "EntryListTableViewController.h"
 #import "Entry.h"
+#import "EntryCreationFormViewController.h"
 
 static NSString* const cellIdentifier = @"CellIdentifier";
 
@@ -27,20 +28,14 @@ static NSString* const cellIdentifier = @"CellIdentifier";
     
     [self.tableView registerClass:UITableViewCell.self forCellReuseIdentifier:cellIdentifier];
     
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
-
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTouchEntryCreationBarButton:)];
+    self.navigationItem.rightBarButtonItem = addButton;
     
     // pull to reflesh
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -117,30 +112,6 @@ static NSString* const cellIdentifier = @"CellIdentifier";
 }
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - TableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
@@ -148,6 +119,15 @@ static NSString* const cellIdentifier = @"CellIdentifier";
     //Shop *shop = self.dataSource.shops[indexPath.row];
     //ShopDetailViewController *shopDetailViewController = [[ShopDetailViewController alloc] initWithShopModel:shop];
     //[self.navigationController pushViewController:shopDetailViewController animated:YES];
+}
+
+
+#pragma mark - Bar button action selector
+
+- (void)didTouchEntryCreationBarButton:(id)sender {
+    EntryCreationFormViewController *entryCreationFormViewController = [[EntryCreationFormViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:entryCreationFormViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

@@ -15,6 +15,11 @@
 		55597C9B1ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55597C9A1ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.m */; };
 		5586AFCD1AFC5FC9009D10C4 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFCC1AFC5FC9009D10C4 /* Entry.m */; };
 		5586AFD01AFC7645009D10C4 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */; };
+		5586AFE01AFCAA71009D10C4 /* EntryCreationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFDF1AFCAA71009D10C4 /* EntryCreationFormViewController.m */; };
+		5586AFE41AFCAF08009D10C4 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFE21AFCAF08009D10C4 /* TextFieldCell.m */; };
+		5586AFE51AFCAF08009D10C4 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5586AFE31AFCAF08009D10C4 /* TextFieldCell.xib */; };
+		5586AFEA1AFCB4C0009D10C4 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFE81AFCB4C0009D10C4 /* TextViewCell.m */; };
+		5586AFEB1AFCB4C0009D10C4 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5586AFE91AFCB4C0009D10C4 /* TextViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,14 @@
 		5586AFCC1AFC5FC9009D10C4 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		5586AFCE1AFC7645009D10C4 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
 		5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
+		5586AFDE1AFCAA71009D10C4 /* EntryCreationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryCreationFormViewController.h; sourceTree = "<group>"; };
+		5586AFDF1AFCAA71009D10C4 /* EntryCreationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryCreationFormViewController.m; sourceTree = "<group>"; };
+		5586AFE11AFCAF08009D10C4 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		5586AFE21AFCAF08009D10C4 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		5586AFE31AFCAF08009D10C4 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		5586AFE71AFCB4C0009D10C4 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		5586AFE81AFCB4C0009D10C4 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
+		5586AFE91AFCB4C0009D10C4 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
 		96871A58D0B9EF36F957CC00 /* Pods-HTTP_Networking_sample_objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTP_Networking_sample_objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTP_Networking_sample_objc/Pods-HTTP_Networking_sample_objc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +144,9 @@
 			children = (
 				5586AFCE1AFC7645009D10C4 /* EntryListTableViewController.h */,
 				5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */,
+				5586AFDE1AFCAA71009D10C4 /* EntryCreationFormViewController.h */,
+				5586AFDF1AFCAA71009D10C4 /* EntryCreationFormViewController.m */,
+				5586AFE61AFCAF5C009D10C4 /* Cell */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -142,6 +158,19 @@
 				5586AFCC1AFC5FC9009D10C4 /* Entry.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5586AFE61AFCAF5C009D10C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5586AFE11AFCAF08009D10C4 /* TextFieldCell.h */,
+				5586AFE21AFCAF08009D10C4 /* TextFieldCell.m */,
+				5586AFE31AFCAF08009D10C4 /* TextFieldCell.xib */,
+				5586AFE71AFCB4C0009D10C4 /* TextViewCell.h */,
+				5586AFE81AFCB4C0009D10C4 /* TextViewCell.m */,
+				5586AFE91AFCB4C0009D10C4 /* TextViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		9F9651ED764A9EE1579CD202 /* Pods */ = {
@@ -244,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55597C8F1ADF8BB700E49245 /* LaunchScreen.xib in Resources */,
+				5586AFEB1AFCB4C0009D10C4 /* TextViewCell.xib in Resources */,
 				55597C8C1ADF8BB700E49245 /* Images.xcassets in Resources */,
+				5586AFE51AFCAF08009D10C4 /* TextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +329,10 @@
 				5586AFCD1AFC5FC9009D10C4 /* Entry.m in Sources */,
 				55597C841ADF8BB700E49245 /* AppDelegate.m in Sources */,
 				55597C811ADF8BB700E49245 /* main.m in Sources */,
+				5586AFE41AFCAF08009D10C4 /* TextFieldCell.m in Sources */,
+				5586AFE01AFCAA71009D10C4 /* EntryCreationFormViewController.m in Sources */,
 				5586AFD01AFC7645009D10C4 /* EntryListTableViewController.m in Sources */,
+				5586AFEA1AFCB4C0009D10C4 /* TextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
