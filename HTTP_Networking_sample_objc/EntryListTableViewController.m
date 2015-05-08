@@ -35,19 +35,43 @@ static NSString* const cellIdentifier = @"CellIdentifier";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    [Entry getEntriesWithSuccess:^(NSArray *entries) {
-        NSLog(@"%@", entries);
-        self.entries = [[[entries reverseObjectEnumerator] allObjects] mutableCopy];
-        [self.tableView reloadData];
-    }OrFailure:^(NSError *error) {
-        NSLog(@"%@", error);
-    }];
+
     
+    // pull to reflesh
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self refreshEntries];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refreshEntries {
+    [Entry getEntriesWithSuccess:^(NSArray *entries) {
+        self.entries = [[[entries reverseObjectEnumerator] allObjects] mutableCopy];
+        [self.tableView reloadData];
+    }OrFailure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (void)onRefresh:(id)sender {
+    [self.refreshControl beginRefreshing];
+    [Entry getEntriesWithSuccess:^(NSArray *entries) {
+        self.entries = [[[entries reverseObjectEnumerator] allObjects] mutableCopy];
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }OrFailure:^(NSError *error) {
+        NSLog(@"%@", error);
+        [self.refreshControl endRefreshing];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -79,7 +103,7 @@ static NSString* const cellIdentifier = @"CellIdentifier";
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -89,7 +113,7 @@ static NSString* const cellIdentifier = @"CellIdentifier";
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
