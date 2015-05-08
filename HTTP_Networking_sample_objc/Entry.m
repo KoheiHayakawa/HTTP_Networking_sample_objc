@@ -9,13 +9,15 @@
 #import "Entry.h"
 #import "AFNetworking.h"
 
-static NSString* const kBaseURL = @"http://localhost:3000/api/v1/entries";
+static NSString* const kBaseURL = @"http://localhost:3000/api/v1";
+static NSString* const kPath = @"entries";
 
 @implementation Entry
 
 - (id) initWithEntryDictionary: (NSDictionary*)entryDictionary {
     self = [super init];
     if (self) {
+        self.iiid = [[entryDictionary objectForKey:@"id"] intValue];
         self.title = [entryDictionary objectForKey:@"title"];
         self.body = [entryDictionary objectForKey:@"body"];
     }
@@ -25,8 +27,9 @@ static NSString* const kBaseURL = @"http://localhost:3000/api/v1/entries";
 + (void)getEntriesWithSuccess:(void (^)(NSArray *))success
                     OrFailure:(void (^)(NSError *))failure {
  
+    NSString *urlStr = [NSString stringWithFormat:@"%@/%@", kBaseURL, kPath];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:kBaseURL parameters:nil
+    [manager GET:urlStr parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSMutableArray *entries = [[NSMutableArray alloc] init];
              for (id entryDictionary in responseObject) {
@@ -38,6 +41,21 @@ static NSString* const kBaseURL = @"http://localhost:3000/api/v1/entries";
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              failure(error);
          }
+     ];
+}
+
+- (void)deleteEntryWithSuccess:(void (^)())success
+                     OrFailure:(void (^)(NSError *))failure {
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@/%@/%d", kBaseURL, kPath, self.iiid];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager DELETE:urlStr parameters:nil
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                success();
+            }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                failure(error);
+            }
      ];
 }
 
