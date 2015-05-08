@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FD55E2CC2627B1B57E759F0 /* libPods-HTTP_Networking_sample_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C30591AE3E50D124B7315D /* libPods-HTTP_Networking_sample_objc.a */; };
 		55597C811ADF8BB700E49245 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55597C801ADF8BB700E49245 /* main.m */; };
 		55597C841ADF8BB700E49245 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55597C831ADF8BB700E49245 /* AppDelegate.m */; };
-		55597C871ADF8BB700E49245 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55597C861ADF8BB700E49245 /* ViewController.m */; };
-		55597C8A1ADF8BB700E49245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55597C881ADF8BB700E49245 /* Main.storyboard */; };
 		55597C8C1ADF8BB700E49245 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55597C8B1ADF8BB700E49245 /* Images.xcassets */; };
 		55597C8F1ADF8BB700E49245 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55597C8D1ADF8BB700E49245 /* LaunchScreen.xib */; };
 		55597C9B1ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55597C9A1ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.m */; };
+		5586AFCD1AFC5FC9009D10C4 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFCC1AFC5FC9009D10C4 /* Entry.m */; };
+		5586AFD01AFC7645009D10C4 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +28,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C30591AE3E50D124B7315D /* libPods-HTTP_Networking_sample_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTTP_Networking_sample_objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FA30723C9CB6BE9DEB9D0C3 /* Pods-HTTP_Networking_sample_objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTP_Networking_sample_objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTP_Networking_sample_objc/Pods-HTTP_Networking_sample_objc.release.xcconfig"; sourceTree = "<group>"; };
 		55597C7B1ADF8BB700E49245 /* HTTP_Networking_sample_objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTP_Networking_sample_objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55597C7F1ADF8BB700E49245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55597C801ADF8BB700E49245 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55597C821ADF8BB700E49245 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55597C831ADF8BB700E49245 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		55597C851ADF8BB700E49245 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55597C861ADF8BB700E49245 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		55597C891ADF8BB700E49245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55597C8B1ADF8BB700E49245 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		55597C8E1ADF8BB700E49245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		55597C941ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTP_Networking_sample_objcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55597C991ADF8BB700E49245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55597C9A1ADF8BB700E49245 /* HTTP_Networking_sample_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTP_Networking_sample_objcTests.m; sourceTree = "<group>"; };
+		5586AFCB1AFC5FC9009D10C4 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		5586AFCC1AFC5FC9009D10C4 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		5586AFCE1AFC7645009D10C4 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
+		5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
+		96871A58D0B9EF36F957CC00 /* Pods-HTTP_Networking_sample_objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTP_Networking_sample_objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTP_Networking_sample_objc/Pods-HTTP_Networking_sample_objc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD55E2CC2627B1B57E759F0 /* libPods-HTTP_Networking_sample_objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				55597C7D1ADF8BB700E49245 /* HTTP_Networking_sample_objc */,
 				55597C971ADF8BB700E49245 /* HTTP_Networking_sample_objcTests */,
 				55597C7C1ADF8BB700E49245 /* Products */,
+				9F9651ED764A9EE1579CD202 /* Pods */,
+				E64CCC4F6118FDF10C6CA0BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +91,8 @@
 			children = (
 				55597C821ADF8BB700E49245 /* AppDelegate.h */,
 				55597C831ADF8BB700E49245 /* AppDelegate.m */,
-				55597C851ADF8BB700E49245 /* ViewController.h */,
-				55597C861ADF8BB700E49245 /* ViewController.m */,
-				55597C881ADF8BB700E49245 /* Main.storyboard */,
+				5586AFD51AFC878B009D10C4 /* Model */,
+				5586AFD41AFC8785009D10C4 /* Controller */,
 				55597C8B1ADF8BB700E49245 /* Images.xcassets */,
 				55597C8D1ADF8BB700E49245 /* LaunchScreen.xib */,
 				55597C7E1ADF8BB700E49245 /* Supporting Files */,
@@ -119,6 +126,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5586AFD41AFC8785009D10C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5586AFCE1AFC7645009D10C4 /* EntryListTableViewController.h */,
+				5586AFCF1AFC7645009D10C4 /* EntryListTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5586AFD51AFC878B009D10C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5586AFCB1AFC5FC9009D10C4 /* Entry.h */,
+				5586AFCC1AFC5FC9009D10C4 /* Entry.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F9651ED764A9EE1579CD202 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96871A58D0B9EF36F957CC00 /* Pods-HTTP_Networking_sample_objc.debug.xcconfig */,
+				4FA30723C9CB6BE9DEB9D0C3 /* Pods-HTTP_Networking_sample_objc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E64CCC4F6118FDF10C6CA0BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11C30591AE3E50D124B7315D /* libPods-HTTP_Networking_sample_objc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55597C9E1ADF8BB700E49245 /* Build configuration list for PBXNativeTarget "HTTP_Networking_sample_objc" */;
 			buildPhases = (
+				468D9F54E5F6C02DEC8F12C5 /* Check Pods Manifest.lock */,
 				55597C771ADF8BB700E49245 /* Sources */,
 				55597C781ADF8BB700E49245 /* Frameworks */,
 				55597C791ADF8BB700E49245 /* Resources */,
+				62ECA065F8DF922C8B8F28AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +243,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55597C8A1ADF8BB700E49245 /* Main.storyboard in Resources */,
 				55597C8F1ADF8BB700E49245 /* LaunchScreen.xib in Resources */,
 				55597C8C1ADF8BB700E49245 /* Images.xcassets in Resources */,
 			);
@@ -214,14 +257,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		468D9F54E5F6C02DEC8F12C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62ECA065F8DF922C8B8F28AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTP_Networking_sample_objc/Pods-HTTP_Networking_sample_objc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55597C771ADF8BB700E49245 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55597C871ADF8BB700E49245 /* ViewController.m in Sources */,
+				5586AFCD1AFC5FC9009D10C4 /* Entry.m in Sources */,
 				55597C841ADF8BB700E49245 /* AppDelegate.m in Sources */,
 				55597C811ADF8BB700E49245 /* main.m in Sources */,
+				5586AFD01AFC7645009D10C4 /* EntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		55597C881ADF8BB700E49245 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55597C891ADF8BB700E49245 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		55597C8D1ADF8BB700E49245 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +414,7 @@
 		};
 		55597C9F1ADF8BB700E49245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96871A58D0B9EF36F957CC00 /* Pods-HTTP_Networking_sample_objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTTP_Networking_sample_objc/Info.plist;
@@ -355,6 +425,7 @@
 		};
 		55597CA01ADF8BB700E49245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA30723C9CB6BE9DEB9D0C3 /* Pods-HTTP_Networking_sample_objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTTP_Networking_sample_objc/Info.plist;
@@ -416,6 +487,7 @@
 				55597CA01ADF8BB700E49245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55597CA11ADF8BB700E49245 /* Build configuration list for PBXNativeTarget "HTTP_Networking_sample_objcTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +496,7 @@
 				55597CA31ADF8BB700E49245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

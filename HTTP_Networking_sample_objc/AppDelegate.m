@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EntryListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    EntryListTableViewController *entryListTableViewController = [[EntryListTableViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:entryListTableViewController];
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.rootViewController = navigationController;
+    [_window makeKeyAndVisible];
+
     return YES;
 }
 
