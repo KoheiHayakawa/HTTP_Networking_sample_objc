@@ -16,6 +16,8 @@
 
 + (void)getEntriesWithSuccess:(void (^)(NSArray *entries))success
                     OrFailure:(void (^)(NSError *error))failure;
+- (void)createEntryWithSuccess:(void (^)())success
+                     OrFailure:(void (^)(NSError *error))failure;
 - (void)deleteEntryWithSuccess:(void (^)())success
                      OrFailure:(void (^)(NSError *error))failure;
 

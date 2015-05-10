@@ -7,6 +7,7 @@
 //
 
 #import "EntryCreationFormViewController.h"
+#import "Entry.h"
 #import "TextFieldCell.h"
 #import "TextViewCell.h"
 
@@ -85,6 +86,14 @@
     NSLog(@"%@", textFieldCell.textField.text);
     NSLog(@"%@", textViewCell.textView.text);
 
+    Entry *entry = [[Entry alloc] init];
+    entry.title = textFieldCell.textField.text;
+    entry.body = textViewCell.textView.text;
+    [entry createEntryWithSuccess:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } OrFailure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end

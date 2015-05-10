@@ -44,6 +44,22 @@ static NSString* const kPath = @"entries";
      ];
 }
 
+- (void)createEntryWithSuccess:(void (^)())success
+                     OrFailure:(void (^)(NSError *))failure {
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@/%@", kBaseURL, kPath];
+    NSDictionary *params = @{@"entry":@{@"title":self.title, @"body":self.body}};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:urlStr parameters:params
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                success();
+            }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                failure(error);
+            }
+     ];
+}
+
 - (void)deleteEntryWithSuccess:(void (^)())success
                      OrFailure:(void (^)(NSError *))failure {
     
